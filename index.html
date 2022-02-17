@@ -2,32 +2,46 @@
 <html>
 
 <!-- Sources start -->
-<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- Sources end -->
 
 <style>
-	.red-box {
-		border-color: red;
-		border-style: solid;
-		border-width: 2px;
+	:root {
+		--accent-color: black;
+		--text-icon-size: 1.5em;
+		--shadow-config: 0 10px 20px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.25);
+	}
+
+	body {
+		font-family: monospace, arial, sans-serif;
+		font-size: var(--text-icon-size, 20px);
+		background-color: white;
+		color: black;
+	}
+
+	.box {
+		border: 1px solid rgba(0,0,0,0.15);
+		border-radius: 10px;
+	}
+
+	.elevated-box {
+		box-shadow: var(--shadow-config);
 		padding: 20px;
 	}
 
 	.fa {
-		border-radius: 50%;
-		border-style: solid;
-		border-width: 2px;
-		padding: 10px;
+		padding: 5px;
 		margin: 5px;
-		font-size: 30px;
-		width: 30px;
+		font-size: var(--text-icon-size, 20px);
+		width: var(--text-icon-size, 20px);
 		text-decoration: none;
-		color: red;
+		color: var(--accent-color, black);
 	}
 
 	.fa:hover {
+		box-shadow: var(--shadow-config);
 		opacity: 0.5;
+		color: var(--accent-color, black);
 	}
 
 	.centered-layout {
@@ -35,19 +49,8 @@
 		text-align: center;
 	}
 
-	h1 {
-		padding: 20px 0px 20px 0px;
-	}
-
-	h2 {
-		padding: 10px 0px 10px 0px;
-	}
-
-	body {
-		font-family: Roboto, Arial, sans-serif;
-		font-size: 20px;
-		background-color: black;
-		color: white;
+	#social-media-box {
+		margin-top: 10px;
 	}
 </style>
 
@@ -55,24 +58,21 @@
 	<title>ederekun</title>
 </head>
 
-<body>
-	<div class="centered-layout">
-		<h1 class="red-box">Hi! I am ederekun</h1>
+<div class="centered-layout">
+	<h2 class="box elevated-box">Hi! I am ederekun</h2>
 
-		<main>
-			<div class="red-box">
-				<h2>Still WIP</h2>
-				<p>
-					While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?
-				</p>
-			</div>
-			<div class="red-box centered-layout" style="padding: 5px; margin-top: 10px;">
-				<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook" target="_blank"></a>
-				<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram" target="_blank"></a>
-				<a href="https://github.com/ederekun" class="fa fa-github" target="_blank"></a>
-			</div>
-		</main>
-	</div>
-</body>
+	<main>
+		<div class="box elevated-box">
+			<h3>Still WIP</h3>
+			<hr>
+			<p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p>
+		</div>
+		<div id="social-media-box" class="centered-layout">
+			<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook box" target="_blank"></a>
+			<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram box" target="_blank"></a>
+			<a href="https://github.com/ederekun" class="fa fa-github box" target="_blank"></a>
+		</div>
+	</main>
+</div>
 
 </html>
