@@ -7,7 +7,7 @@
 
 <style>
 	:root {
-		--accent-color: black;
+		--accent-color: red;
 		--text-icon-size: 1.5em;
 		--shadow-config: 0 10px 20px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.25);
 	}
@@ -40,13 +40,16 @@
 
 	.fa:hover {
 		box-shadow: var(--shadow-config);
-		opacity: 0.5;
 		color: var(--accent-color, black);
 	}
 
 	.centered-layout {
 		margin: 15% 25% 15% 25%;
 		text-align: center;
+	}
+
+	#username {
+		color: var(--accent-color, black);
 	}
 
 	#social-media-box {
@@ -59,7 +62,7 @@
 </head>
 
 <div class="centered-layout">
-	<h2 class="box elevated-box">Hi! I am ederekun</h2>
+	<h2 class="box elevated-box">Hi! I am <span id="username">ederekun</span></h2>
 
 	<main>
 		<div class="box elevated-box">
