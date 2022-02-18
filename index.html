@@ -10,10 +10,11 @@
 	:root {
 		--accent-color: red;
 		--text-icon-size: 30px;
+		--primary-font: 'Roboto Mono'
 	}
 
 	body {
-		font-family: 'Roboto Mono', arial, sans-serif;
+		font-family: var(--primary-font, sans-serif);
 		font-size: var(--text-icon-size, 20px);
 		background-color: white;
 		color: black;
@@ -47,6 +48,11 @@
 
 	.fa:hover {
 		color: var(--accent-color, black);
+	}
+
+	.social-label {
+		font-family: var(--primary-font, sans-serif);
+		margin: 5px;
 	}
 
 	.centered-layout {
@@ -83,9 +89,9 @@
 			<section id="title-card">
 				<header class="card">Hi! I am <span id="username">ederekun</span></header>
 				<div id="social-media-card">
-					<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook card" target="_blank"> Facebook</a>
-					<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram card" target="_blank"> Instagram</a>
-					<a href="https://github.com/ederekun" class="fa fa-github card" target="_blank"> Github</a>
+					<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook card" target="_blank"> <span class="social-label">Facebook</span></a>
+					<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram card" target="_blank"> <span class="social-label">Instagram</span></a>
+					<a href="https://github.com/ederekun" class="fa fa-github card" target="_blank"> <span class="social-label">Github</span></a>
 				</div>
 			</section>
 
