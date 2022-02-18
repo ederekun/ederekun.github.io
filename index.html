@@ -27,15 +27,17 @@
 
 	.card {
 		display: block;
-		box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.25);
+		box-shadow: 0 10px 25px rgba(0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.25);
 		border: 1px solid rgba(0,0,0,0.15);
 		border-radius: 10px;
 		padding: 20px;
 		margin: 0 15px 0 15px;
+		background-color: white;
 	}
 
 	.card:hover {
 		box-shadow: 0 0 0 0;
+		transform: scale(0.95);
 	}
 
 	.fa {
@@ -47,7 +49,7 @@
 	}
 
 	.fa:hover {
-		color: var(--accent-color, black);
+		color: black;
 	}
 
 	.social-label {
@@ -55,12 +57,34 @@
 		margin: 5px;
 	}
 
-	.centered-layout {
-		margin: 20% 10% 20% 10%;
+	.centered-layer {
+		width: 75vw;
+		height: 50vw;
+		margin: 20% auto 20% auto;
 		text-align: center;
 	}
 
+	#username-card {
+		background: repeating-linear-gradient(
+			45deg,
+			var(--accent-color, black) 0px,
+			var(--accent-color, black) 40px,
+			black 40px,
+			black 80px
+		);
+		color: white;
+	}
+
+	#username-card:hover  {
+		background: white;
+		color: black;
+	}
+
 	#username {
+		font-weight: bold;
+	}
+
+	#username:hover {
 		color: var(--accent-color, black);
 	}
 
@@ -85,9 +109,9 @@
 
 <body>
 	<main>
-		<div class="centered-layout">
+		<div class="centered-layer">
 			<section id="title-card">
-				<header class="card">Hi! I am <span id="username">ederekun</span></header>
+				<header id="username-card" class="card">Hi! I am <span id="username">ederekun</span></header>
 				<div id="social-media-card">
 					<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook card" target="_blank"> <span class="social-label">Facebook</span></a>
 					<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram card" target="_blank"> <span class="social-label">Instagram</span></a>
