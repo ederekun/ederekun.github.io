@@ -47,9 +47,17 @@
 		background-color: white;
 	}
 
-	.card:hover {
-		box-shadow: 0 0 0 0;
-		transform: scale(0.95);
+	.card:active {
+		animation-name: card-press;
+		animation-duration: 100ms;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes card-press {
+		100% {
+			box-shadow: 0 0 0 0;
+			transform: scale(0.98);
+		}
 	}
 
 	.fa {
