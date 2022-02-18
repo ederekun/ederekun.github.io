@@ -3,48 +3,54 @@
 
 <!-- Sources start -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 <!-- Sources end -->
 
 <style>
 	:root {
 		--accent-color: red;
-		--text-icon-size: 1.5em;
-		--shadow-config: 0 10px 20px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.25);
+		--text-icon-size: 30px;
 	}
 
 	body {
-		font-family: monospace, arial, sans-serif;
+		font-family: 'Roboto Mono', arial, sans-serif;
 		font-size: var(--text-icon-size, 20px);
 		background-color: white;
 		color: black;
+		user-select: none;
 	}
 
-	.box {
+	p {
+		font-size: calc(var(--text-icon-size, 20px) - 5px);
+	}
+
+	.card {
+		display: block;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.10), 0 5px 5px rgba(0,0,0,0.25);
 		border: 1px solid rgba(0,0,0,0.15);
 		border-radius: 10px;
+		padding: 20px;
+		margin: 0 15px 0 15px;
 	}
 
-	.elevated-box {
-		box-shadow: var(--shadow-config);
-		padding: 20px;
+	.card:hover {
+		box-shadow: 0 0 0 0;
 	}
 
 	.fa {
-		padding: 5px;
-		margin: 5px;
-		font-size: var(--text-icon-size, 20px);
-		width: var(--text-icon-size, 20px);
+		padding: 15px;
+		margin: 15px;
+		font-size: calc(var(--text-icon-size, 20px) - 5px);
 		text-decoration: none;
 		color: var(--accent-color, black);
 	}
 
 	.fa:hover {
-		box-shadow: var(--shadow-config);
 		color: var(--accent-color, black);
 	}
 
 	.centered-layout {
-		margin: 15% 25% 15% 25%;
+		margin: 20% 10% 20% 10%;
 		text-align: center;
 	}
 
@@ -52,7 +58,17 @@
 		color: var(--accent-color, black);
 	}
 
-	#social-media-box {
+	#title-card {
+		float: left;
+		width: 50%;
+	}
+
+	#info-card {
+		float: right;
+		width: 50%;
+	}
+
+	#social-media-card {
 		margin-top: 10px;
 	}
 </style>
@@ -61,21 +77,27 @@
 	<title>ederekun</title>
 </head>
 
-<div class="centered-layout">
-	<h2 class="box elevated-box">Hi! I am <span id="username">ederekun</span></h2>
-
+<body>
 	<main>
-		<div class="box elevated-box">
-			<h3>Still WIP</h3>
-			<hr>
-			<p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p>
-		</div>
-		<div id="social-media-box" class="centered-layout">
-			<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook box" target="_blank"></a>
-			<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram box" target="_blank"></a>
-			<a href="https://github.com/ederekun" class="fa fa-github box" target="_blank"></a>
+		<div class="centered-layout">
+			<section id="title-card">
+				<header class="card">Hi! I am <span id="username">ederekun</span></header>
+				<div id="social-media-card">
+					<a href="https://www.facebook.com/ederekun/" class="fa fa-facebook card" target="_blank"> Facebook</a>
+					<a href="https://www.instagram.com/exdxe_/" class="fa fa-instagram card" target="_blank"> Instagram</a>
+					<a href="https://github.com/ederekun" class="fa fa-github card" target="_blank"> Github</a>
+				</div>
+			</section>
+
+			<aside id="info-card">
+				<div class="card">
+					<h4>Still WIP</h4>
+					<hr>
+					<p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p>
+				</div>
+			</aside>
 		</div>
 	</main>
-</div>
+</body>
 
 </html>
