@@ -25,6 +25,13 @@
 		font-size: calc(var(--text-icon-size, 20px) - 5px);
 	}
 
+	.centered-layer {
+		width: 75vw;
+		height: 50vw;
+		margin: 20% auto 20% auto;
+		text-align: center;
+	}
+
 	.card {
 		display: block;
 		box-shadow: 0 10px 25px rgba(0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.25);
@@ -57,11 +64,14 @@
 		margin: 5px;
 	}
 
-	.centered-layer {
-		width: 75vw;
-		height: 50vw;
-		margin: 20% auto 20% auto;
-		text-align: center;
+	#title-card {
+		float: left;
+		width: 50%;
+	}
+
+	#info-card {
+		float: right;
+		width: 50%;
 	}
 
 	#username-card {
@@ -86,16 +96,6 @@
 
 	#username:hover {
 		color: var(--accent-color, black);
-	}
-
-	#title-card {
-		float: left;
-		width: 50%;
-	}
-
-	#info-card {
-		float: right;
-		width: 50%;
 	}
 
 	#social-media-card {
