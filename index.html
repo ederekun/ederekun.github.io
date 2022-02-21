@@ -9,7 +9,7 @@
 <style>
 	:root {
 		--accent-color: red;
-		--text-icon-size: 30px;
+		--text-icon-size: 1.5em;
 		--primary-font: 'Roboto Mono'
 	}
 
@@ -80,17 +80,19 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		width: 75%;
+		width: 90%;
 		justify-content: center;
 	}
 
 	#info-card {
 		float: left;
-		width: 50%;
 	}
 
 	#ref-card {
 		float: right;
+	}
+
+	#info-card, #ref-card {
 		width: 50%;
 	}
 
@@ -119,12 +121,7 @@
 	}
 
 	@media (max-width: 800px), (max-device-width: 480px) {
-		#info-card {
-			float: none;
-			width: 100%;
-		}
-
-		#ref-card {
+		#info-card, #ref-card {
 			float: none;
 			width: 100%;
 		}
