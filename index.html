@@ -34,20 +34,23 @@
 	}
 
 	.card {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		box-shadow: 0 10px 25px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.45);
 		border: 1px solid rgba(0,0,0,0.15);
 		border-radius: 10px;
 		padding: 15px;
 		margin: 15px;
 		background-color: white;
-		text-align: center;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.card:active {
 		animation-name: card-press;
 		animation-duration: 100ms;
 		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;
 	}
 
 	@keyframes card-press {
@@ -55,6 +58,22 @@
 			box-shadow: 0 0 0 0;
 			transform: scale(0.98);
 		}
+	}
+
+	.accent-bg-pattern {
+		background: repeating-linear-gradient(
+			45deg,
+			var(--accent-color, black) 0px,
+			var(--accent-color, black) 40px,
+			black 40px,
+			black 80px
+		);
+		color: white;
+	}
+
+	.accent-bg-pattern:hover {
+		background: white;
+		color: black;
 	}
 
 	.fa {
@@ -71,9 +90,13 @@
 		margin: 5px;
 	}
 
-	#centered-layer {
-		display: flex;
-		flex-direction: column;
+	#centered-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-areas: 
+			"header header header"
+			"info info ref";
 		position: absolute;
 		margin: auto;
 		top: 0;
@@ -81,35 +104,11 @@
 		bottom: 0;
 		left: 0;
 		width: 90%;
-		justify-content: center;
-	}
-
-	#info-card {
-		float: left;
-	}
-
-	#ref-card {
-		float: right;
-	}
-
-	#info-card, #ref-card {
-		width: 50%;
+		height: 50%;
 	}
 
 	#title-card {
-		background: repeating-linear-gradient(
-			45deg,
-			var(--accent-color, black) 0px,
-			var(--accent-color, black) 40px,
-			black 40px,
-			black 80px
-		);
-		color: white;
-	}
-
-	#title-card:hover  {
-		background: white;
-		color: black;
+		grid-area: header;
 	}
 
 	#username {
@@ -120,10 +119,23 @@
 		color: var(--accent-color, black);
 	}
 
+	#info-card {
+		grid-area: info;
+	}
+
+	#ref-card {
+		grid-area: ref;
+	}
+
 	@media (max-width: 800px), (max-device-width: 480px) {
-		#info-card, #ref-card {
-			float: none;
-			width: 100%;
+		#centered-container {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, 1fr);
+			grid-template-areas: 
+				"header"
+				"info"
+				"ref";
+			height: 100%
 		}
 	}
 </style>
@@ -134,22 +146,20 @@
 
 <body>
 	<main>
-		<div id="centered-layer">
-			<header id="title-card" class="card"><h1>Hi! I am <span id="username">ederekun</span></h1></header>
-			<section>
-				<div id="info-card">
-					<div class="card">
-						<h2>Still WIP</h2>
-						<hr>
-						<p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p>
-					</div>
-				</div>
+		<div id="centered-container">
+			<header id="title-card">
+				<div class="card accent-bg-pattern"><h1>Hi! I am <span id="username">ederekun</span></h1></div>
+			</header>
 
-				<div id="ref-card">
-					<a href="https://www.linkedin.com/in/ederekun/" class="fa fa-linkedin card" target="_blank"> <h3 class="social-label">LinkedIn</h3></a>
-					<a href="https://www.freecodecamp.org/ederekun" class="fa fa-free-code-camp card" target="_blank"> <h3 class="social-label">freeCodeCamp</h3></a>
-					<a href="https://github.com/ederekun" class="fa fa-github card" target="_blank"> <h3 class="social-label">Github</h3></a>
-				</div>
+			<section id="info-card">
+				<div class="card accent-bg-pattern"><h2>Still WIP</h2></div>
+				<div class="card"><p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p></div>
+			</section>
+
+			<section id="ref-card">
+				<a href="https://www.linkedin.com/in/ederekun/" class="card fa fa-linkedin" target="_blank"><h3 class="social-label">LinkedIn</h3></a>
+				<a href="https://www.freecodecamp.org/ederekun" class="card fa fa-free-code-camp" target="_blank"><h3 class="social-label">freeCodeCamp</h3></a>
+				<a href="https://github.com/ederekun" class="card fa fa-github" target="_blank"><h3 class="social-label">Github</h3></a>
 			</section>
 		</div>
 	</main>
