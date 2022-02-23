@@ -90,6 +90,11 @@
 		margin: 5px;
 	}
 
+	#parent-container {
+		display: grid;
+		grid-template-rows: 0.1fr 1fr 0.1fr;	
+	}
+
 	#centered-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -97,15 +102,11 @@
 		grid-template-areas: 
 			"header header header"
 			"info info ref";
+		grid-row: 2 / 3;
 		align-items: center;
-		position: absolute;
 		margin: auto;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 90%;
-		height: 50%;
+		height: 80%;
+		width: 80%;
 	}
 
 	#title-card {
@@ -130,21 +131,12 @@
 
 	@media (max-width: 800px), (max-device-width: 480px) {
 		#centered-container {
-			grid-template-columns: 1fr;
+			grid-template-columns: auto;
 			grid-template-rows: repeat(3, 1fr);
 			grid-template-areas: 
 				"header"
 				"info"
 				"ref";
-			height: 100%
-		}
-
-		#title-card {
-			align-self:	end;
-		}
-
-		#ref-card {
-			align-self: start;
 		}
 	}
 </style>
@@ -155,21 +147,23 @@
 
 <body>
 	<main>
-		<div id="centered-container">
-			<header id="title-card">
-				<div class="card accent-bg-pattern"><h1>Hi! I am <span id="username">ederekun</span></h1></div>
-			</header>
+		<div id="parent-container">
+			<div id="centered-container">
+				<section id="title-card">
+					<div class="card accent-bg-pattern"><h1>Hi! I am <span id="username">ederekun</span></h1></div>
+				</section>
 
-			<section id="info-card">
-				<div class="card accent-bg-pattern"><h2>Still WIP</h2></div>
-				<div class="card"><p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p></div>
-			</section>
+				<section id="info-card">
+					<div class="card accent-bg-pattern"><h2>Still WIP</h2></div>
+					<div class="card"><p>While I am still thinking of what to put here and studying how to add stuff, why don't you stalk me a bit?</p></div>
+				</section>
 
-			<section id="ref-card">
-				<a href="https://www.linkedin.com/in/ederekun/" class="card fa fa-linkedin" target="_blank"><h3 class="social-label">LinkedIn</h3></a>
-				<a href="https://www.freecodecamp.org/ederekun" class="card fa fa-free-code-camp" target="_blank"><h3 class="social-label">freeCodeCamp</h3></a>
-				<a href="https://github.com/ederekun" class="card fa fa-github" target="_blank"><h3 class="social-label">Github</h3></a>
-			</section>
+				<section id="ref-card">
+					<a href="https://www.linkedin.com/in/ederekun/" class="card fa fa-linkedin" target="_blank"><h3 class="social-label">LinkedIn</h3></a>
+					<a href="https://www.freecodecamp.org/ederekun" class="card fa fa-free-code-camp" target="_blank"><h3 class="social-label">freeCodeCamp</h3></a>
+					<a href="https://github.com/ederekun" class="card fa fa-github" target="_blank"><h3 class="social-label">Github</h3></a>
+				</section>
+			</div>
 		</div>
 	</main>
 </body>
