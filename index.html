@@ -9,7 +9,7 @@
 <style>
 	:root {
 		--accent-color: red;
-		--text-icon-size: 1.5em;
+		--text-icon-size: 30px;
 		--primary-font: 'Roboto Mono'
 	}
 
@@ -97,6 +97,7 @@
 		grid-template-areas: 
 			"header header header"
 			"info info ref";
+		align-items: center;
 		position: absolute;
 		margin: auto;
 		top: 0;
@@ -136,6 +137,14 @@
 				"info"
 				"ref";
 			height: 100%
+		}
+
+		#title-card {
+			align-self:	end;
+		}
+
+		#ref-card {
+			align-self: start;
 		}
 	}
 </style>
