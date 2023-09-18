@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2022 by Edrick Vince Sinsuan (https://codepen.io/ederekun/pen/KKQwbrm)
+Copyright (c) 2022 by Edrick Vince Sinsuan (https://codepen.io/ederekun/pen/KKQwbrm, https://github.com/ederekun/ederekun.github.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

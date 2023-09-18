@@ -19,7 +19,7 @@ body {
   /* Allow background image to cover all of the viewport */
   margin: 0;
   /* Original src: https://unsplash.com/photos/KZSDCocsOEE*/
-  background-image: url("https://i.imgur.com/zJZXzZa.jpg");
+  background-image: url("./src/wallpaper.jpg");
   /* Full height */
   height: 100vh;
   /* Center and scale the image nicely */
@@ -130,7 +130,6 @@ a {
   max-width: 300px;
   min-width: 250px;
   width: 100%;
-  border-radius: 100%;
 }
 #about aside div {
   display: flex;
