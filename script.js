@@ -17,7 +17,12 @@ const sectionsArr = [
 	},
 ];
 
-const fetchAndUpdateSection = (location, target) => {
+const selectNavButton = (id) => {
+	$(".nav-buttons").removeClass("nav-selected");
+	$("#" + id).addClass("nav-selected");	
+};
+
+const fetchAndSetSection = (location, target) => {
 	$(target).animate({ opacity: 0 }, 500, function() {
 		$.get(location, function(data) {
 			$(target).html(data);
@@ -29,11 +34,10 @@ const fetchAndUpdateSection = (location, target) => {
 const updateSection = (id, target) => {
 	sectionsArr.forEach(element => {
 		if (element.id == id) {
-			$(".nav-buttons").removeClass("nav-selected");
-			$("#" + id).addClass("nav-selected");	
-			fetchAndUpdateSection(element.location, target);
+			selectNavButton(id);
+			fetchAndSetSection(element.location, target);
 		}
-	});	
+	});
 };
 
 const main = () => {
