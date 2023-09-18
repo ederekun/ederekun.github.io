@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 @keyframes select {
 	100% {
 		background-color: white;
@@ -70,7 +74,7 @@ a {
 }
 
 #navbar {
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -80,7 +84,7 @@ a {
 #navbar div {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -96,7 +100,7 @@ a {
 	color: black;
 }
 
-#section-container section {
+#section-content section {
 	min-height: 100vh;
 }
 
@@ -129,6 +133,7 @@ a {
 	flex-direction: column;
 	flex-wrap: inherit;
 	text-align: center;
+	align-items: center;
 	margin: 0 5em;
 }
 #about div h3 {
@@ -143,13 +148,13 @@ a {
 }
 #about aside div {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: inherit;
 	align-items: baseline;
 	text-align: left;
 }
 #about aside div h3 {
-	margin-left: 2em;
+	padding: 0.25em 1.25em;
 	color: white;
 }
 
@@ -165,7 +170,7 @@ a {
 }
 #project-tile-container a div {
 	text-align: center;
-	text-wrap: nowrap;
+	text-wrap: wrap;
 }
 #project-tile-container a div p {
 	margin-top: -0.75em;

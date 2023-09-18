@@ -42,12 +42,12 @@ const updateSection = (id, target) => {
 
 const main = () => {
 	const defaultSection = "nav-welcome";
-	const sectionContainer = "#section-container";
+	const sectionContent = "#section-content";
 
-	updateSection(defaultSection, sectionContainer);
+	updateSection(defaultSection, sectionContent);
 
 	$(".nav-buttons").click(function() {
-		updateSection($(this).attr("id"), sectionContainer);
+		updateSection($(this).attr("id"), sectionContent);
 	});
 };
 
