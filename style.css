@@ -148,13 +148,13 @@ a {
 }
 #about aside div {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: inherit;
 	align-items: baseline;
 	text-align: left;
 }
 #about aside div h3 {
-	margin-left: 2em;
+	padding: 0.25em 1.25em;
 	color: white;
 }
 
@@ -170,7 +170,7 @@ a {
 }
 #project-tile-container a div {
 	text-align: center;
-	text-wrap: nowrap;
+	text-wrap: wrap;
 }
 #project-tile-container a div p {
 	margin-top: -0.75em;
