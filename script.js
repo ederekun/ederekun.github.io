@@ -18,11 +18,11 @@ const sectionsArr = [
 ];
 
 const fetchAndUpdateSection = (location, target) => {
-	$(target).hide("fast", function() {
+	$(target).animate({ opacity: 0 }, 500, function() {
 		$.get(location, function(data) {
 			$(target).html(data);
 		});
-		$(target).show("fast");
+		$(target).animate({ opacity: 1 }, 500);
 	});
 };
 
