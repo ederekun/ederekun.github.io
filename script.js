@@ -28,16 +28,19 @@ const fetchAndUpdateSection = (location, target) => {
 
 const updateSection = (id, target) => {
 	sectionsArr.forEach(element => {
-		if (element.id == id)
+		if (element.id == id) {
+			$(".nav-buttons").removeClass("nav-selected");
+			$("#" + id).addClass("nav-selected");	
 			fetchAndUpdateSection(element.location, target);
+		}
 	});	
 };
 
 const main = () => {
-	const defaultSection = "./sections/welcome-section.html";
+	const defaultSection = "nav-welcome";
 	const sectionContainer = "#section-container";
 
-	fetchAndUpdateSection(defaultSection, sectionContainer);
+	updateSection(defaultSection, sectionContainer);
 
 	$(".nav-buttons").click(function() {
 		updateSection($(this).attr("id"), sectionContainer);
