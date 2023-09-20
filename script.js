@@ -1,18 +1,18 @@
 const sectionsArr = [
 	{
-		id: "nav-welcome",
-		location: "./sections/welcome-section.html"
+		id: "welcome",
+		location: "./sections/welcome.html"
 	},
 	{
-		id: "nav-about",
+		id: "about",
 		location: "./sections/about.html"
 	},
 	{
-		id: "nav-projects",
+		id: "projects",
 		location: "./sections/projects.html"
 	},
 	{
-		id: "nav-contact",
+		id: "contact",
 		location: "./sections/contact.html"
 	},
 ];
@@ -23,7 +23,7 @@ const selectNavButton = (id) => {
 };
 
 const updateURLState = (id) => {
-	window.history.pushState({ "nav": id }, "Edrick", "?selected=" + id);
+	window.history.pushState(null, "Edrick", "?section=" + id);
 }
 
 const fetchAndSetSection = (location, target) => {
@@ -47,11 +47,11 @@ const updateSection = (id, target) => {
 
 const main = () => {
 	var currentSection = null;
-	const sectionContent = "#section-content";
+	const sectionContent = "#content";
 
-	currentSection = new URLSearchParams(window.location.search).get('selected');
+	currentSection = new URLSearchParams(window.location.search).get('section');
 	if (currentSection === null)
-		currentSection = "nav-welcome";
+		currentSection = "welcome";
 
 	updateSection(currentSection, sectionContent);
 

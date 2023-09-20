@@ -44,22 +44,22 @@ a {
 	padding: 1em 0;
 }
 
-.foreheader-text, #projects h1, #contact h1, #welcome-section h1 {
+.foreheader-text, #section-projects h1, #section-contact h1, #section-welcome h1 {
 	/* Use a nice font-weight */
 	font-weight: 400;
 }
 
-.bnw-select, #contact div a, #about h2, #welcome-section h1, #navbar div a, .project-tile, .foreheader-text, #projects h1, #contact h1 {
+.bnw-select, #section-contact div a, #section-about h2, #section-welcome h1, #navbar div a, .project-tile, .foreheader-text, #section-projects h1, #section-contact h1 {
 	padding: 0.25em 1em;
 }
 
-.bnw-select:hover, #contact div a:hover, #about h2:hover, #welcome-section h1:hover, #navbar div a:hover, .project-tile:hover {
+.bnw-select:hover, #section-contact div a:hover, #section-about h2:hover, #section-welcome h1:hover, #navbar div a:hover, .project-tile:hover {
 	/* Disable shadows, if there's any */
 	text-shadow: none;
 	animation: select 0.5s forwards;
 }
 
-.floating-text, #contact div a, #projects h1, #contact h1, #welcome-section h1 {
+.floating-text, #section-contact div a, #section-projects h1, #section-contact h1, #section-welcome h1 {
 	text-shadow: 2px 2px 4px #000000;
 }
 
@@ -100,18 +100,18 @@ a {
 	color: black;
 }
 
-#section-content section {
+#content section {
 	min-height: 100vh;
 }
 
-#welcome-section {
+#section-welcome {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 }
-#welcome-section .bnw-select:hover #terminal-anim, #welcome-section #contact div a:hover #terminal-anim, #contact div #welcome-section a:hover #terminal-anim, #welcome-section #about h2:hover #terminal-anim, #about #welcome-section h2:hover #terminal-anim, #welcome-section .project-tile:hover #terminal-anim, #welcome-section #navbar div a:hover #terminal-anim, #navbar div #welcome-section a:hover #terminal-anim, #welcome-section h1:hover #terminal-anim {
+#section-welcome .bnw-select:hover #terminal-anim, #section-welcome #section-contact div a:hover #terminal-anim, #section-contact div #section-welcome a:hover #terminal-anim, #section-welcome #section-about h2:hover #terminal-anim, #section-about #section-welcome h2:hover #terminal-anim, #section-welcome .project-tile:hover #terminal-anim, #section-welcome #navbar div a:hover #terminal-anim, #navbar div #section-welcome a:hover #terminal-anim, #section-welcome h1:hover #terminal-anim {
 	animation-name: terminal-input-inv;
 }
 
@@ -121,14 +121,14 @@ a {
 	animation: terminal-input 1s step-start infinite;
 }
 
-#about {
+#section-about {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	align-items: center;
 	padding: 0 1em;
 }
-#about div {
+#section-about div {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: inherit;
@@ -136,33 +136,33 @@ a {
 	align-items: center;
 	margin: 0 2em;
 }
-#about div h3 {
+#section-about div h3 {
 	font-weight: 200;
 	margin-top: -1em;
 	color: #bfbfbf;
 }
-#about div img {
+#section-about div img {
 	max-width: 300px;
 	min-width: 250px;
 	width: 100%;
 	padding: 2em 0;
 }
-#about aside div {
+#section-about aside div {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: inherit;
 	align-items: baseline;
 	text-align: left;
 }
-#about aside div h3 {
+#section-about aside div h3 {
 	padding: 0.25em 1.25em;
 	color: white;
 }
 
-#projects {
+#section-projects {
 	padding: 0 1em;
 }
-#projects, #contact {
+#section-projects, #section-contact {
 	flex-direction: column;
 }
 #project-tile-container {
@@ -177,13 +177,13 @@ a {
 	margin-top: -0.75em;
 }
 
-#contact div {
+#section-contact div {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-#contact div a {
+#section-contact div a {
 	display: flex;
 	flex-direction: inherit;
 	flex-wrap: inherit;
@@ -192,23 +192,23 @@ a {
 	padding: 0 1em;
 	margin: 1em;
 }
-#contact div a i {
+#section-contact div a i {
 	font-size: 1.5em;
 	margin-right: 0.5em;
 }
-#contact div a h2 {
+#section-contact div a h2 {
 	font-size: 1.25em;
 	font-weight: 200;
 }
 
-#projects, #project-tile-container, #contact {
+#section-projects, #project-tile-container, #section-contact {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 @media only screen and (max-width: 1000px) {
-	#about {
+	#section-about {
 		flex-wrap: wrap;
 		justify-content: center;
 		/* 
@@ -216,10 +216,10 @@ a {
 		 * aligned at the section's center 
 		 */
 	}
-	#about div {
+	#section-about div {
 		align-self: flex-end;
 	}
-	#about aside {
+	#section-about aside {
 		align-self: flex-start;
 	}
 }
