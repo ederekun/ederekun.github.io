@@ -134,7 +134,7 @@ a {
 	flex-wrap: inherit;
 	text-align: center;
 	align-items: center;
-	margin: 0 5em;
+	margin: 0 2em;
 }
 #about div h3 {
 	font-weight: 200;
@@ -145,6 +145,7 @@ a {
 	max-width: 300px;
 	min-width: 250px;
 	width: 100%;
+	padding: 2em 0;
 }
 #about aside div {
 	display: flex;
