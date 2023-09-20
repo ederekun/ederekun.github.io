@@ -22,6 +22,10 @@ const selectNavButton = (id) => {
 	$("#" + id).addClass("nav-selected");	
 };
 
+const updateURLState = (id) => {
+	window.history.pushState({ "nav": id }, "Edrick", "?selected=" + id);
+}
+
 const fetchAndSetSection = (location, target) => {
 	$(target).animate({ opacity: 0 }, 500, function() {
 		$.get(location, function(data) {
@@ -36,15 +40,20 @@ const updateSection = (id, target) => {
 		if (element.id == id) {
 			selectNavButton(id);
 			fetchAndSetSection(element.location, target);
+			updateURLState(id);
 		}
 	});
 };
 
 const main = () => {
-	const defaultSection = "nav-welcome";
+	var currentSection = null;
 	const sectionContent = "#section-content";
 
-	updateSection(defaultSection, sectionContent);
+	currentSection = new URLSearchParams(window.location.search).get('selected');
+	if (currentSection === null)
+		currentSection = "nav-welcome";
+
+	updateSection(currentSection, sectionContent);
 
 	$(".nav-buttons").click(function() {
 		updateSection($(this).attr("id"), sectionContent);
