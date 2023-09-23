@@ -17,14 +17,26 @@ const sectionsArr = [
 	},
 ];
 
+// Refers to the id/class of the content section container to be updated
+const sectionContent = "#content";
+
+const defaultValues = {
+	section: "welcome"
+};
+
 const selectNavButton = (id) => {
 	$(".nav-buttons").removeClass("nav-selected");
 	$("#" + id).addClass("nav-selected");	
 };
 
-const updateURLState = (id) => {
-	window.history.pushState(null, "Edrick", "?section=" + id);
-}
+const updateURLKey = (key, target) => {
+	var currentURLKeys = new URLSearchParams(window.location.search);
+
+	if (currentURLKeys.get(key) != target) {
+		currentURLKeys.set(key, target);
+		window.history.pushState(null, "", "?" + currentURLKeys);
+	}
+};
 
 const fetchAndSetSection = (location, target) => {
 	$(target).animate({ opacity: 0 }, 500, function() {
@@ -40,26 +52,43 @@ const updateSection = (id, target) => {
 		if (element.id == id) {
 			selectNavButton(id);
 			fetchAndSetSection(element.location, target);
-			updateURLState(id);
 		}
 	});
 };
 
-const main = () => {
-	var currentSection = null;
-	const sectionContent = "#content";
+const loadSection = () => {
+	var currentURLKeys = new URLSearchParams(window.location.search);
+	var currentSection = currentURLKeys.get("section");
 
-	currentSection = new URLSearchParams(window.location.search).get('section');
-	if (currentSection === null)
-		currentSection = "welcome";
+	// Add default section key to URL if not provided
+	if (currentSection === null) {
+		currentSection = defaultValues.section;
+		currentURLKeys.set("section", currentSection);
+		window.history.replaceState(null, "", "?" + currentURLKeys);
+	}
 
 	updateSection(currentSection, sectionContent);
-
-	$(".nav-buttons").click(function() {
-		updateSection($(this).attr("id"), sectionContent);
-	});
 };
 
+// To prevent refreshing the section unnecessarily when navigating history
+var storedCurrentSection;
+
+// Listens for history state pushes and navigations
+window.addEventListener("popstate", (event) => {
+	var currentURLKeys = new URLSearchParams(window.location.search);
+	var currentSection = currentURLKeys.get("section");
+
+	if (storedCurrentSection != currentSection) {
+		storedCurrentSection = currentSection;
+		updateSection(currentURLKeys.get("section"), sectionContent);
+	}
+});
+
 $(document).ready(function() {
-	main();
+	loadSection();
+
+	$(".nav-buttons").click(function() {
+		// Just update URL section key, it invokes popstate event
+		updateURLKey("section", $(this).attr("id"));
+	});
 });
