@@ -1,19 +1,19 @@
 const sectionsArr = [
 	{
 		id: "welcome",
-		location: "./sections/welcome.html"
+		location: "sections/welcome.html"
 	},
 	{
 		id: "about",
-		location: "./sections/about.html"
+		location: "sections/about.html"
 	},
 	{
 		id: "projects",
-		location: "./sections/projects.html"
+		location: "sections/projects.html"
 	},
 	{
 		id: "contact",
-		location: "./sections/contact.html"
+		location: "sections/contact.html"
 	},
 ];
 
