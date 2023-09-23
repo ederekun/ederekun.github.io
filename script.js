@@ -42,8 +42,8 @@ const fetchAndSetSection = (location, target) => {
 	$(target).animate({ opacity: 0 }, 500, function() {
 		$.get(location, function(data) {
 			$(target).html(data);
+			$(target).animate({ opacity: 1 }, 500);
 		});
-		$(target).animate({ opacity: 1 }, 500);
 	});
 };
 
