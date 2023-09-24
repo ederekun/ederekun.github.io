@@ -43,7 +43,6 @@ const updateURLKey = (key, target) => {
 	if (currentURLKeys.get(key) != target) {
 		currentURLKeys.set(key, target);
 		window.history.pushState(null, "", "?" + currentURLKeys);
-		updateTitle(target);
 	}
 };
 
@@ -60,6 +59,7 @@ const updateSection = (id, target) => {
 	sectionsArr.forEach(element => {
 		if (element.id == id) {
 			selectNavButton(id);
+			updateTitle(id);
 			fetchAndSetSection(element.location, target);
 		}
 	});
@@ -74,7 +74,6 @@ const loadSection = () => {
 		currentSection = defaultValues.section;
 		currentURLKeys.set("section", currentSection);
 		window.history.replaceState(null, "", "?" + currentURLKeys);
-		updateTitle(currentSection);
 	}
 
 	updateSection(currentSection, sectionContent);
