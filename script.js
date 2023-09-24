@@ -29,12 +29,21 @@ const selectNavButton = (id) => {
 	$("#" + id).addClass("nav-selected");	
 };
 
+// Store the root title at init then append section
+const storedTitle = document.title;
+
+const updateTitle = (id) => {
+	var sectionTitle = $("#" + id).text();
+	document.title = `${storedTitle} | ${sectionTitle}`;
+};
+
 const updateURLKey = (key, target) => {
 	var currentURLKeys = new URLSearchParams(window.location.search);
 
 	if (currentURLKeys.get(key) != target) {
 		currentURLKeys.set(key, target);
 		window.history.pushState(null, "", "?" + currentURLKeys);
+		updateTitle(target);
 	}
 };
 
@@ -65,6 +74,7 @@ const loadSection = () => {
 		currentSection = defaultValues.section;
 		currentURLKeys.set("section", currentSection);
 		window.history.replaceState(null, "", "?" + currentURLKeys);
+		updateTitle(currentSection);
 	}
 
 	updateSection(currentSection, sectionContent);
