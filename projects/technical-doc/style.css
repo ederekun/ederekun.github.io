@@ -1,0 +1,119 @@
+:root {
+  --debian-red: #d70a53;
+  --border-grey: 1px solid hsl(0, 0%, 75%);
+}
+
+html, body {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.rounded-container {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.return-link {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.rounded-container, .return-link {
+  border: var(--border-grey);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.return-link:hover {
+  background-color: var(--debian-red, red);
+  /* Override #main-doc color variable setting to anchor links */
+  color: white !important;
+}
+
+.section-break {
+  border-top: var(--border-grey);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+#external-container {
+  display: grid;
+  margin: 2rem;
+  grid-template-columns: min(500px, 1fr) 3fr;
+  grid-template-areas: "navbar main-doc";
+}
+
+#navbar {
+  grid-area: navbar;
+  margin-right: 2rem;
+}
+#navbar ul {
+  /* Remove x-axis container padding */
+  padding: 1rem 0;
+}
+#navbar ul li {
+  padding: 0.5rem 0;
+  text-align: center;
+  list-style: none;
+}
+#navbar ul li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+#navbar ul li:hover {
+  background-color: var(--debian-red, red);
+}
+#navbar ul li:hover a {
+  color: white;
+}
+
+#main-doc {
+  grid-area: main-doc;
+}
+#main-doc a {
+  color: var(--debian-red, red);
+}
+
+#doc-topic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#doc-topic img {
+  max-width: 100%;
+  height: 100%;
+}
+#doc-topic h1 {
+  margin-left: 2rem;
+}
+
+#Debian_GNU_Linux_FAQ .return-link {
+  visibility: collapse;
+}
+
+@media only screen and (max-width: 1100px) {
+  .section-grid {
+    grid-template-columns: auto;
+  }
+  .section-grid p, .section-grid div {
+    margin: 0.5rem 0;
+  }
+
+  #external-container {
+    grid-template-columns: auto;
+    grid-template-areas: "navbar" "main-doc";
+  }
+
+  #navbar {
+    margin-right: 0;
+  }
+
+  #Debian_GNU_Linux_FAQ .return-link {
+    visibility: visible;
+  }
+}

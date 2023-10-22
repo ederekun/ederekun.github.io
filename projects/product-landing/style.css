@@ -1,0 +1,14 @@
+/* Virtually all of the website's classes are provided by bootstrap, thus, the lack of local CSS definitions. */
+
+:root {
+  /* Pop!_OS orange color */
+  --accent-color: #FBB86C;
+}
+
+.accented-line {
+  width: 100%;
+  margin: 5px 0;
+  height: 3px;
+  border-radius: 1rem;
+  background-color: var(--accent-color, orange);
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+  --accent-color: hsl(100, 50%, 40%);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.elevated-container:focus {
+  outline: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.container, .elevated-container {
+  border: 1px solid hsl(0, 0%, 75%);
+  border-radius: 10px;
+  background: white;
+}
+
+.element-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.element-label {
+  font-weight: medium;
+  margin-bottom: 10px;
+}
+
+.element-input {
+  padding: 10px;
+}
+
+.element-input, .element-input::placeholder {
+  color: var(--accent-color, black);
+}
+
+.element-input:focus {
+  background: var(--accent-color, black);
+}
+
+.element-input:focus, .element-input:focus::placeholder {
+  color: white;
+}
+
+.element-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.element-radio-checkbox {
+  accent-color: var(--accent-color, black);
+}
+
+.element-radio-checkbox:active {
+  accent-color: white;
+}
+
+.element-option:checked {
+  background: white;
+  color: var(--accent-color, black);
+}
+
+#base-container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 20% 30px 20%;
+  padding: 25px;
+}
+
+#title-container {
+  justify-content: center;
+  text-align: center;
+  margin: 25px 0 25px 0;
+}
+
+#title {
+  color: var(--accent-color, black);
+}
+
+#description {
+  margin-top: -10px;
+}
+
+#survey-form {
+  padding: 10px;
+}

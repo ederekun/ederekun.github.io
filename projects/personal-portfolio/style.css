@@ -1,0 +1,214 @@
+@keyframes select {
+  100% {
+    background-color: white;
+    color: black;
+  }
+}
+@keyframes terminal-input {
+  50% {
+    background-color: white;
+  }
+}
+@keyframes terminal-input-inv {
+  50% {
+    background-color: black;
+  }
+}
+body {
+  font-family: monospace, Arial, sans-serif;
+  /* Allow background image to cover all of the viewport */
+  margin: 0;
+  /* Original src: https://unsplash.com/photos/KZSDCocsOEE*/
+  background-image: url("https://i.imgur.com/zJZXzZa.jpg");
+  /* Full height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* Set text-color according to background */
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.transparent-container, .project-tile {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1em 0;
+}
+
+.foreheader-text, #projects h1, #contact h1, #welcome-section h1 {
+  /* Use a nice font-weight */
+  font-weight: 400;
+}
+
+.bnw-select, #contact div a, #about h2, #welcome-section h1, #navbar div a, .project-tile, .foreheader-text, #projects h1, #contact h1 {
+  padding: 0.25em 1em;
+}
+
+.bnw-select:hover, #contact div a:hover, #about h2:hover, #welcome-section h1:hover, #navbar div a:hover, .project-tile:hover {
+  /* Disable shadows, if there's any */
+  text-shadow: none;
+  animation: select 0.5s forwards;
+}
+
+.floating-text, #contact div a, #projects h1, #contact h1, #welcome-section h1 {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.project-tile {
+  margin: 1em;
+  color: gray;
+}
+
+#external-container {
+  /* Strictly limit width to viewport */
+  max-width: 100vw;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#navbar div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#navbar div a {
+  display: block;
+  color: white;
+  font-size: 1.25em;
+}
+
+#section-container section {
+  min-height: 100vh;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#welcome-section .bnw-select:hover #terminal-anim, #welcome-section #contact div a:hover #terminal-anim, #contact div #welcome-section a:hover #terminal-anim, #welcome-section #about h2:hover #terminal-anim, #about #welcome-section h2:hover #terminal-anim, #welcome-section .project-tile:hover #terminal-anim, #welcome-section #navbar div a:hover #terminal-anim, #navbar div #welcome-section a:hover #terminal-anim, #welcome-section h1:hover #terminal-anim {
+  animation-name: terminal-input-inv;
+}
+
+#terminal-anim {
+  /* Disable shadows, if there's any */
+  text-shadow: none;
+  animation: terminal-input 1s step-start infinite;
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#about div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: inherit;
+  text-align: center;
+  margin: 0 5em;
+}
+#about div h3 {
+  font-weight: 200;
+  margin-top: -1em;
+  color: #bfbfbf;
+}
+#about div img {
+  max-width: 300px;
+  min-width: 250px;
+  width: 100%;
+  border-radius: 100%;
+}
+#about aside div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: inherit;
+  align-items: baseline;
+  text-align: left;
+}
+#about aside div h3 {
+  margin-left: 2em;
+  color: white;
+}
+
+#about, #projects {
+  /* Prevent navbar overlap with non-center-aligned content*/
+  padding: 4em 1em 0 1em;
+}
+
+#projects, #contact {
+  flex-direction: column;
+}
+#project-tile-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#project-tile-container a div {
+  text-align: center;
+}
+#project-tile-container a div p {
+  margin-top: -0.75em;
+}
+
+#contact div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#contact div a {
+  display: flex;
+  flex-direction: inherit;
+  flex-wrap: inherit;
+  align-items: baseline;
+  color: white;
+  padding: 0 1em;
+  margin: 1em;
+}
+#contact div a i {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+}
+#contact div a h2 {
+  font-size: 1.25em;
+  font-weight: 200;
+}
+
+#projects, #project-tile-container, #contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  #about {
+    flex-wrap: wrap;
+    justify-content: center;
+    /* 
+     * Consider div and aside as one component to be 
+     * aligned at the section's center 
+     */
+  }
+  #about div {
+    align-self: flex-end;
+  }
+  #about aside {
+    align-self: flex-start;
+  }
+}

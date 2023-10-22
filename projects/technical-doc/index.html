@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Debian Technical Documentation</title>
+	<link rel="stylesheet" href="./style.css">
+
+	<!-- Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/src/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/src/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/src/icon/favicon-16x16.png">
+	<link rel="manifest" href="/src/icon/site.webmanifest">	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>	
+</head>
+
+<body>
+<div id="external-container">
+<nav id="navbar">
+	<header id="doc-topic" class="rounded-container">
+	<img src="https://www.debian.org/Pics/openlogo-50.png">
+	<h1>Debian Users' Manuals</h1>
+	</header>
+	<ul class="rounded-container">
+	<li><a class="nav-link" href="#Debian_GNU_Linux_FAQ">Debian GNU Linux FAQ</a></li>
+	<li><a class="nav-link" href="#Debian_Installation_Guide">Debian Installation Guide</a></li>
+	<li><a class="nav-link" href="#Debian_Release_Notes">Debian Release Notes</a></li>
+	<li><a class="nav-link" href="#Debian_Reference_Card">Debian Reference Card</a></li>
+	<li><a class="nav-link" href="#The_Debian_Administrator's_Handbook">The Debian Administrator's Handbook</a></li>
+	<li><a class="nav-link" href="#Debian_Reference">Debian Reference</a></li>
+	<li><a class="nav-link" href="#Securing_Debian_Manual">Securing Debian Manual</a></li>
+	<li><a class="nav-link" href="#Aptitude_User's_Manual">Aptitude User's Manual</a></li>
+	<li><a class="nav-link" href="#APT_User's_Guide">APT User's Guide</a></li>
+	<li><a class="nav-link" href="#Using_APT_Offline">Using APT Offline</a></li>
+	<li><a class="nav-link" href="#Debian_Java_FAQ">Debian Java FAQ</a></li>
+	<li><a class="nav-link" href="#Debian_Hamradio_Maintainer's_Guide">Debian Hamradio Maintainer's Guide</a></li>
+	</ul>
+</nav>
+<main id="main-doc">
+	<section id="Debian_GNU_Linux_FAQ" class="main-section rounded-container">
+	<header><h2>Debian GNU Linux FAQ</h2></header>
+	<p>Users' Frequently Asked Questions.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Susan G. Kleinmann, Sven Rudolph, Santiago Vila, Josip Rodin, Javier Fernández-Sanguino Peña</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Maintainer:</b></p>
+		<p>Javier Fernández-Sanguino Peña</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Ready</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<!-- Prevent border breaching by unordered list -->
+		<div><p>Debian package <a href="https://packages.debian.org/debian-faq" target="_blank">debian-faq</a><br>
+		<br>Latest version is available in:
+		<br>English, German, French, Italian, Japanese, Dutch, Portuguese, Russian, and Chinese<br>
+		<br>The latest XML source is available through the Git repository.
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/ddp-team/debian-faq" target="_blank">Link to online Debian FAQ</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/ddp-team/debian-faq.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Debian_Installation_Guide" class="main-section rounded-container">
+	<header><h2>Debian Installation Guide</h2></header>
+	<p>Installation instructions for the Debian GNU/Linux distribution. The manual describes the installation process using the Debian Installer, the installation system for Debian that was first released with <a href="https://www.debian.org/releases/sarge/">Sarge</a> (Debian GNU/Linux 3.1).
+		<br>Additional information related to the installation can be found in the <a href="https://wiki.debian.org/DebianInstaller/FAQ">Debian Installer FAQ</a> and the <a href="https://wiki.debian.org/DebianInstaller">Debian Installer wiki pages</a>.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Debian Installer team</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Maintainer:</b></p>
+		<p>Debian Installer team</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>The manual is not yet perfect. Active work is being done for the current and future Debian releases. Help is welcome, especially with non-x86 installation and translations. Contact <code>debian-boot@lists.debian.org</code> for more information.</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/src:installation-guide">installation-guide</a><br>
+		<br><a href="https://www.debian.org/releases/stable/installmanual">Published version for the stable release</a>
+		<br>Available on the <a href="https://www.debian.org/CD/">official CDs and DVDs</a> in the <code>/doc/manual/</code> directory.<br>
+		<br><a href="https://www.debian.org/releases/testing/installmanual">Version being prepared for the next stable (in testing)</a><br>
+		<br><a href="https://d-i.debian.org/manual/">Development version</a><br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository.
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/installer-team/installation-guide">Link to online installation guide</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/installer-team/installation-guide.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<p>Versions of the installation guide for previous releases (and possibly the next release) of Debian are linked from the <a href="https://www.debian.org/releases/">release page</a> for those releases.</p>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Debian_Release_Notes" class="main-section rounded-container">
+	<header><h2>Debian Release Notes</h2></header>
+	<p>This document contains information on what's new in the current Debian GNU/Linux distribution and complete upgrading information for users of older Debian releases.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Adam Di Carlo, Bob Hilliard, Josip Rodin, Anne Bezemer, Rob Bradford, Frans Pop, Andreas Barth, Javier Fernández-Sanguino Peña, Steve Langasek</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Actively worked upon for Debian releases. Contact <code>debian-doc@lists.debian.org</code> for more information. Problems and patches should be reported as <a href="https://bugs.debian.org/release-notes">bugs against the release-notes pseudo-package</a>.</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p><a href="https://www.debian.org/releases/stable/releasenotes">Released version</a>
+		<br>Available on the <a href="https://www.debian.org/CD/">official full CDs and DVDs</a> in the <code>/doc/release-notes/</code> directory.<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/ddp-team/release-notes">Link to online Debian release notes</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/ddp-team/release-notes.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Debian_Reference_Card" class="main-section rounded-container">
+	<header><h2>Debian Reference Card</h2></header>
+	<p>This card provides new users of Debian GNU/Linux with the most important commands in a single page to be used as a reference when working with Debian GNU/Linux systems. Basic (or better) knowledge of computers, files, directories and the command line is required.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>W. Martin Borgert</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Maintainer:</b></p>
+		<p>W. Martin Borgert</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; in active development</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/debian-refcard">debian-refcard</a><br>
+		<br>Latest version is available in:
+		<br>Arabic, Bulgarian, Catalan, Czech, Danish, German, Greek, English, Spanish, Basque, Finnish, French, Galician, Hebrew, Hindi, Hungarian, Italian, Japanese, Korean, Lithuanian, Norwegian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Swedish, Turkish, Vietnamese, and Chinese<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/ddp-team/refcard">Link to online Debian reference card</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/ddp-team/refcard.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="The_Debian_Administrator's_Handbook" class="main-section rounded-container">
+	<header><h2>The Debian Administrator's Handbook</h2></header>
+	<p>The Debian Administrator's Handbook teaches the essentials to anyone who wants to become an effective and independent Debian GNU/Linux administrator.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Raphaël Hertzog, Roland Mas</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; in active development</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/debian-handbook">debian-handbook</a><br>
+		<br>Latest version is available in:
+		<br>Arabic, Danish, German, Greek, English, Spanish, Persian, French, Croatian, Indonesian, Italian, Japanese, Norwegian, Polish, Portuguese, Romanian, Russian, Turkish, Vietnamese, and Chinese<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/hertzog/debian-handbook">Link to online Debian administrator's handbook</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/hertzog/debian-handbook.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Debian_Reference" class="main-section rounded-container">
+	<header><h2>Debian Reference</h2></header>
+	<p>This Debian GNU/Linux reference covers many aspects of system administration through shell-command examples. Basic tutorials, tips, and other information are provided for topics including system installation, Debian package management, the Linux kernel under Debian, system tuning, building a gateway, text editors, VCS, programming, and GnuPG.<br>
+	<br>Previously known as "Quick Reference".</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Osamu Aoki (青木 修)</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Maintainer:</b></p>
+		<p>Osamu Aoki (青木 修)</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; in active development</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/debian-reference">debian-reference</a><br>
+		<br>Latest version is available in:
+		<br>English, French, German, Spanish, Italian, Japanese, Portuguese, and Chinese<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/debian/debian-reference">Link to online Debian reference</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/debian/debian-reference.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Securing_Debian_Manual" class="main-section rounded-container">
+	<header><h2>Securing Debian Manual</h2></header>
+	<p>This manual describes the security of the Debian GNU/Linux operating system and within the Debian project. It starts with the process of securing and hardening the default Debian GNU/Linux installation (both manually and automatically), covers some of the common tasks involved in setting up a secure user and network environment, gives information on the security tools available, steps to take before and after a compromise and also describes how security is enforced in Debian by the security team. The document includes a step by step hardening guide and within the appendix there is detailed information on how to setup an intrusion detection system and a bridge firewall with Debian GNU/Linux.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Alexander Reelsen, Javier Fernández-Sanguino Peña</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Maintainer:</b></p>
+		<p>Javier Fernández-Sanguino Peña</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; under development with few changes. Some of its content might not be fully up-to-date.</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/harden-doc">harden-doc</a><br>
+		<br>Latest version is available in:
+		<br>English, German, Spanish, French, Italian, Japanese, Portuguese, and Chinese<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/ddp-team/securing-debian-manual/">Link to online 'securing Debian' manual</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/ddp-team/securing-debian-manual.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Aptitude_User's_Manual" class="main-section rounded-container">
+	<header><h2>Aptitude User's Manual</h2></header>
+	<p>An introductory guide to the aptitude package manager with the complete command reference.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Daniel Burrows</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; in active development</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/aptitude-doc">aptitude-doc</a><br>
+		<br>Latest version is available in:
+		<br>Czech, English, Spanish, Finnish, French, Italian, Japanese, and Russian<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/apt-team/aptitude">Link to online Aptitude user's manual</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/apt-team/aptitude.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="APT_User's_Guide" class="main-section rounded-container">
+	<header><h2>APT User's Guide</h2></header>
+	<p>This document provides an overview of how to use the APT package manager.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Jason Gunthorpe</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; somewhat stale</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/apt-doc">apt-doc</a><br>
+		<br>Latest version is available in:
+		<br>German, Spanish, French, English, Italian, Japanese, Polish, and Portuguese<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/apt-team/apt">Link to online APT user's guide</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/apt-team/apt.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Using_APT_Offline" class="main-section rounded-container">
+	<header><h2>Using APT Offline</h2></header>
+	<p>This document describes how to use APT in a non-networked environment, specifically a 'sneaker-net' approach for performing upgrades.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Jason Gunthorpe</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; somewhat stale</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/apt-doc">apt-doc</a><br>
+		<br>Latest version is available in:
+		<br>German, Spanish, French, English, Italian, Japanese, Polish, and Portuguese<br>
+		<br>The latest XML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/apt-team/apt">Link to online APT user's guide</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/apt-team/apt.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Debian_Java_FAQ" class="main-section rounded-container">
+	<header><h2>Debian Java FAQ</h2></header>
+	<p>The purpose of this FAQ is to be a place to look for all kind of questions a developer or user might have regarding Java as far as Debian is concerned, it includes license issues, development packages available, and programs related to building a Free Software Java environment.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Javier Fernández-Sanguino Peña, Torsten Werner, Niels Thykier, Sylvestre Ledru</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; in active development although some of its content might not be current.</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/java-common">java-common</a><br>
+		<br>Latest version is available in:
+		<br>English, Italian, and French<br>
+		<br>The latest SGML source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/ddp-team/java-faq">Link to online Debian Java FAQ</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/ddp-team/java-faq.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<section id="Debian_Hamradio_Maintainer's_Guide" class="main-section rounded-container">
+	<header><h2>Debian Hamradio Maintainer's Guide</h2></header>
+	<p>The Debian Hamradio Maintainers Guide is a document that outlines team policy and best current practice for the Deian Hamradio Maintainers packaging team.</p>
+	<div class="section-break section-grid">
+		<p><b>Authors:</b></p>
+		<p>Iain R. Learmonth</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Status:</b></p>
+		<p>Published; in active development.</p>
+	</div>
+	<div class="section-break section-grid">
+		<p><b>Availability:</b></p>
+		<div><p>Debian package <a href="https://packages.debian.org/hamradio-maintguide">hamradio-maintguide</a><br>
+		<br>Latest version is available in:
+		<br>English<br>
+		<br>The latest restructuredText source is available through the <a href="https://packages.debian.org/git">Git</a> repository<br>
+		<ul>
+			<li>Web interface: <a href="https://salsa.debian.org/debian-hamradio-team/hamradio-maintguide/">Link to online Debian Hamradio maintainer's guide</a></li>
+			<li>VCS interface: <code>git clone https://salsa.debian.org/debian-hamradio-team/hamradio-maintguide.git</code></li>
+		</ul>
+		</p></div>
+	</div>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</section>
+	<article id="Disclaimer" class="rounded-container">
+	<header><h2>Disclaimer</h2></header>
+	<p>This is only a non-commercial remake of 'Debian Users' Manuals.' All content shown in this website <i>mostly</i> mirrors that of which could be found in their <a href="https://www.debian.org/doc/user-manuals" target="_blank">official documentation page</a>.</p>
+	<a class="return-link" href="#navbar">Back to top</a>
+	</article>
+</main>
+</div>
+
+</body>
+</html>

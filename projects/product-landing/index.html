@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>System76: Product Landing Page</title>
+	<link rel="stylesheet" href="./style.css">
+	<!-- Import Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- Import Bootstrap -->
+
+	<!-- Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/src/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/src/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/src/icon/favicon-16x16.png">
+	<link rel="manifest" href="/src/icon/site.webmanifest">	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="external-container" class="container-fluid">
+<header id="header" class="container border fixed-top bg-light">
+	<nav id="nav-bar" class="navbar navbar-expand-lg navbar-light">
+	<a href="#disclaimer"><img id="header-img" class="navbar-brand" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/System76_logo.svg" width="120" alt="System76 Logo"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+		<div class="navbar-nav">
+		<a class="nav-item nav-link" href="#about">About</a>
+		<a class="nav-item nav-link" href="#pop-os">Pop!_OS</a>
+		<a class="nav-item nav-link" href="#contact-us">Contact Us</a>
+		<a class="nav-item nav-link" href="#disclaimer">Disclaimer</a>
+		</div>
+	</div>
+	</nav>
+</header>
+
+<main id="main-content">
+	<!-- Assign the nav href to an empty break space to account for fixed-top header space -->
+	<br id="about" class="mb-4">
+	<div id="about-content" class="card mt-4">
+	<h1 class="card-header bg-light">About</h1>
+	<article class="card-body">
+		<div class="row">
+		<div class="col-md my-4">
+			<h2 class="card-title">Our Mission</h2>
+			<div class="accented-line"></div>
+			<p class="card-text">We build open source computers, keyboards, and software, empowering creators, makers, and builders to unleash their potential.</p>
+		</div>
+		<div class="col-md my-4">
+			<h2 class="card-title">Our Vision</h2>
+			<div class="accented-line"></div>
+			<p class="card-text">To create revolutionary open source tools that help others transform the world as we know it. What will you make?</p>
+		</div>
+		</div>
+		<div class="my-4">
+		<h2 class="card-title">Our Values</h2>
+		<div class="accented-line"></div>
+		<p class="card-text"><b>We’re innovators.</b> We’re not here to reinvent the wheel. We’re here to dismantle the wheel, see how it works, and remantle it into a warp drive. Take that, wheel.<br>
+			<br><b>We’re open.</b> Like one of those neon signs in the window, but for our minds. (And our code.)<br>
+			<br><b>We give a science.</b> Everything we make is the result of user feedback. You want more battery life? Done. Manufacture computers in-house? Yep. Find a speeling error on our website? We’ll fix that, too.<br>
+			<br><b>We’re nerds.</b> And we’re proud of it. We even have lasers.<br>
+			<br><b>We’re us.</b> We believe in our work because we believe in yours. Whether you’re building robots, sequencing DNA, developing firmware, or going to space, we want to help you get there.<br></p>
+		</div>
+		<!-- Limit the video window width with a bootstrap container -->
+		<div class="container">
+		<video id="video" class="embed-responsive embed-responsive-16by9" controls>
+			<source src="https://system76.cdn.prismic.io/system76/d118dc52-83f2-46e2-9395-95cfea969b5f_aboutus-sectionlifestyle-slideshowRR.mp4" type="video/mp4">
+		</video>
+		</div>
+	</article>
+	</div>
+
+	<br id="pop-os" class="mb-4">
+	<div id="pop-os-content" class="card mt-4">
+	<h1 class="card-header bg-light">Pop!_OS</h1>
+	<article class="card-body">
+		<div class="my-4">
+		<h2 class="card-title">What is Pop!_OS?</h2>
+		<div class="accented-line"></div>
+		<p class="card-text">Pop!_OS is an operating system for STEM and creative professionals who use their computer as a tool to discover and create. Unleash your potential on secure, reliable open source software. Based on your exceptional curiosity, we sense you have a lot of it.</p>
+		</div>
+		<div class="my-4">
+		<h2 class="card-title">Features</h2>
+		<div class="accented-line"></div>
+		<div class="row">
+			<div class="col-lg my-4">
+			<h3 class="card-subtitle mb-1">Workflow Customization</h3>
+			<p class="card-text">While you’ve got your wheels turning, take the scenic route with a dock and touchpad gestures, or race along a minimalist track from behind the wheel of a revving keyboard. With a variety of both mouse-driven and keyboard-driven customizations, you’re empowered to navigate your workflow the way you’ve always wanted.</p>
+			</div>
+			<div class="col-lg my-4">
+			<h3 class="card-subtitle mb-1">Auto-Tiling With Pop Shell</h3>
+			<p class="card-text">Pop!_OS uses auto-tiling for the same reason that people hire assistants: Organizing your work is incredibly time-consuming. Sure, you could still move, resize, and arrange windows yourself, but why spend the time when your OS does it for you? Auto-tiling helps you be both organized and efficient, and is especially convenient on large displays.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg my-4">
+			<h3 class="card-subtitle mb-1">Keyboard Navigation</h3>
+			<p class="card-text">Arm yourself with a dark-lord level of power at your fingertips. Use keyboard shortcuts to:<br>
+				<br>- move/resize windows
+				<br>- search for anything
+				<br>- launch applications</p>
+			</div>
+			<div class="col-lg my-4">
+			<h3 class="card-subtitle mb-1">Stacking</h3>
+			<p class="card-text">Stack application windows atop one another like tabs in a web browser. Just remember to switch off of Steam when the boss walks in.</p>
+			</div>
+		</div>
+		</div>
+		<div class="my-3">
+		<a class="btn btn-outline-primary btn-block active" href="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/22.04/amd64/intel/5/pop-os_22.04_amd64_intel_5.iso" role="button">Download Pop!_OS 22.04 LTS</a>
+		<a class="btn btn-outline-primary btn-block" href="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/22.04/amd64/nvidia/5/pop-os_22.04_amd64_nvidia_5.iso" role="button">Download Pop!_OS 22.04 LTS (NVIDIA)</a>
+		<a class="btn btn-outline-primary btn-block" href="https://pop-iso.sfo2.cdn.digitaloceanspaces.com/21.10/arm64/raspi/7/pop-os_21.10_arm64_raspi_7.img.xz" role="button">Download Pop!_OS 21.10 (RAS PI 4)</a>
+		</div>
+	</article>
+	</div>
+	
+	<br id="contact-us" class="mb-4">
+	<div id="contact-us-content" class="card mt-4">
+	<h1 class="card-header bg-light overlap-override">Contact Us</h1>
+	<article class="card-body">
+		<form id="form" action="https://www.freecodecamp.com/email-submit">
+		<div class="form-group">
+			<label for="email">Email address</label>
+			<input id="email" class="form-control" name="email" type="email" placeholder="We'll contact you using your submitted email">
+		</div>
+		<div class="form-group">
+			<label for="message">Your message</label>
+			<textarea id="message" class="form-control" name="message" rows="5" placeholder="What is your feedback, inquiry, or concern?"></textarea>
+		</div>
+		<input id="submit" type="submit" class="btn btn-primary float-right" value="Submit">
+		</form>
+	</article>
+	</div>
+</main>
+
+<footer id="footer">
+	<br id="disclaimer" class="mb-4">
+	<div id="disclaimer-content" class="card mt-4">
+	<h1 class="card-header bg-warning">Disclaimer</h1>
+	<article class="card-body bg-white">
+		<p>This is only a non-commercial remake of System76's website using Bootstrap and is in no way related nor involved with the company. The content of the website, however, were completely taken from the official website; along with the download links to official Pop!_OS iso downloads (currently 22.04 LTS, as of the making of this website). The 'Contact Us' section does not send information to them at all as the form submits to <i>https://www.freecodecamp.com/email-submit</i> - which is a stub but a requirement by freeCodeCamp.<br>
+		<br>For their official website, click the button below:</p>
+		<div class="row justify-content-center">
+		<!-- Do not add class="col" to preserve the button's inline property -->
+		<a id="system76-website" class="btn btn-primary" href="https://system76.com/" target="_blank">System76 Official Website</a>
+		</div>
+	</article>  
+	</div>
+</footer>
+</div>
+</body>
+
+</html>
