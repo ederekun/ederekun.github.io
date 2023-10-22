@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Smart Devices: Survey Form</title>
+	<link rel="stylesheet" href="./style.css">
+
+	<!-- Icon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/src/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/src/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/src/icon/favicon-16x16.png">
+	<link rel="manifest" href="/src/icon/site.webmanifest">	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+<main id="base-container">
+<header id="title-container">
+	<h1 id="title">Smart Devices Survey</h1>
+	<p id="description">How many and what devices do people own? Do people trust these devices?</p>
+</header>
+<form id="survey-form" class="container">
+	<div class="element-container">
+	<label for="name" id="name-label" class="element-label">Name</label>
+	<input id="name" class="elevated-container element-input" type="text" placeholder="Insert your name here" required>
+	</div>
+	<div class="element-container">
+	<label for="email" id="email-label" class="element-label">Email</label>
+	<input id="email" class="elevated-container element-input" type="email" placeholder="Insert your email here" required>
+	</div>
+	<div class="element-container">
+	<label for="number" id="number-label" class="element-label">Number of Smart Devices</label>
+	<input id="number" min="0" max="20" class="elevated-container element-input" type="number" placeholder="Insert how many devices you currently own" required>
+	</div>
+	<div class="element-container">
+	<label for="types-selection" id="types-label" class="element-label">Types of Smart Devices currently owned</label>
+	<div id="types-selection" class="element-selection">
+		<div><label for="laptops">
+		<input id="laptops" value="laptops" class="element-radio-checkbox" type="checkbox" name="types"> Laptops
+		</label></div>
+		<div><label for="computers">
+		<input id="computers" value="computers" class="element-radio-checkbox" type="checkbox" name="types"> Desktop Computers
+		</label></div>
+		<div><label for="phones">
+		<input id="phones" value="phones" class="element-radio-checkbox" type="checkbox" name="types"> Smartphones
+		</label></div>
+		<div><label for="speakers">
+		<input id="speakers" value="speakers" class="element-radio-checkbox" type="checkbox" name="types"> Smart Speakers
+		</label></div>
+		<div><label for="plugs">
+		<input id="plugs" value="plugs" class="element-radio-checkbox" type="checkbox" name="types"> Smart Plugs
+		</label></div>
+		<div><label for="bulbs">
+		<input id="bulbs" value="bulbs" class="element-radio-checkbox" type="checkbox" name="types"> Smart Bulbs
+		</label></div>
+		<div><label for="thermostats">
+		<input id="thermostats" value="thermostats" class="element-radio-checkbox" type="checkbox" name="types"> Smart Thermostats
+		</label></div>
+		<div><label for="cookers">
+		<input id="cookers" value="cookers" class="element-radio-checkbox" type="checkbox" name="types"> Smart Cookers
+		</label></div>
+		<div><label for="refrigerators">
+		<input id="refrigerators" value="refrigerators" class="element-radio-checkbox" type="checkbox" name="types"> Smart Refrigerators
+		</label></div>
+		<div><label for="showers">
+		<input id="showers" value="showers" class="element-radio-checkbox" type="checkbox" name="types"> Smart Showers
+		</label></div>
+		<div><label for="others">
+		<input id="others" value="others" class="element-radio-checkbox" type="checkbox" name="types"> Other Devices
+		</label></div>
+	</div>
+	</div>  
+	<div class="element-container">
+	<label for="dropdown" id="dropdown-label" class="element-label">Main device's smartphone OS</label>
+	<select id="dropdown" class="elevated-container element-input">
+		<option value="android" class="element-option">Android</option>
+		<option value="iphone" class="element-option">iPhone</option>
+		<option value="windows" class="element-option">Windows</option>
+		<option value="other" class="element-option">Other</option>
+		<option value="none" class="element-option">None</option>
+	</select>
+	</div>
+	<div class="element-container">
+	<label for="trust-selection" class="element-label">How much do you trust the vendors which you bought your smart devices from?</label>
+	<div id="trust-selection" class="element-selection">
+		<div><label for="very-little">
+		<input id="very-little" value="1" class="element-radio-checkbox" type="radio" name="trust"> Very Little
+		</label></div>
+		<div><label for="little">
+		<input id="little" value="2" class="element-radio-checkbox" type="radio" name="trust"> Little
+		</label></div>
+		<div><label for="somewhat">
+		<input id="somewhat" value="3" class="element-radio-checkbox" type="radio" name="trust"> Somewhat
+		</label></div>
+		<div><label for="completely">
+		<input id="completely" value="4" class="element-radio-checkbox" type="radio" name="trust"> Completely
+		</label></div>
+	</div>
+	</div>
+	<div class="element-container">
+	<label for="trust-reason" id="reason-label" class="element-label">Why do you mis/trust the device vendors?</label>
+	<textarea id="reason" class="elevated-container element-input" placeholder="Please briefly elaborate your reason/s here" required></textarea>
+	</div>
+	<div class="element-container">
+	<button id="submit" class="elevated-container element-input">Submit</button>
+	</div>
+</form>
+</main>
+</body>
+
+</html>
